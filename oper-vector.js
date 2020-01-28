@@ -3,6 +3,10 @@ const {
 	symbols
 } = require('@grunmouse/multioperator-ariphmetic');
 
+const {
+	operators:spec
+} = require('@grunmouse/multioperator-spec-mul');
+
 const Vector = require('./vector.js');
 
 oper.eq.def(Vector, Vector, (a, b)=>{
@@ -51,5 +55,12 @@ oper.neg.useName(Vector);
 
 oper.mul.useName(Vector);
 
+/* Скалярное произведение */
+spec.dot.def(Vector, Vector, (a, b)=>{
+	if(a.length !== b.length){
+		throw new TypeError('Vectors is not equimetric');
+	}
+	return a.reduce((akk, _, i)=>(akk[symbols.ADD](a[i][symbols.MUL](b[i]))), 0);
+});
 
-console.log(new Vector(-1,-2, -3).eq(new Vector(-1,-2,-3)));
+spec.dot.useName(Vector);
