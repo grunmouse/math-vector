@@ -14,6 +14,7 @@ spec.cross.def(Vector3, Vector3, (a, b)=>(
 	new Vector3(a.z*b.y - a.y*b.z, a.x*b.z - a.z*b.x, a.y*b.x - a.x*b.y)
 ));
 
+//Векторное произведение семимерных векторов
 spec.cross.def(Vector7, Vector7, (x, y)=>(
 	Vector7.from({length:7},
 		(_, i)=>{
