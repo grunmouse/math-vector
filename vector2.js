@@ -22,12 +22,12 @@ class Vector2 extends Vector{
 		return {x:this.x, y:this.y};
 	}
 	
-	static from(data){
+	static from(data, mapper){
 		if(!data.length && 'x' in data && 'y' in data){
-			return super.from([data.x, data.y]);
+			return super.from([data.x, data.y], mapper);
 		}
 		else{
-			return super.from(data);
+			return super.from(data, mapper);
 		}
 	}
 

@@ -4,7 +4,7 @@ const {
 
 const Vector2 = require('./vector2.js');
 const Vector3 = require('./vector3.js');
-const Vector3 = require('./vector7.js');
+const Vector7 = require('./vector7.js');
 
 //Псевдоскалярное произведение двухметрых векторов
 spec.cross.def(Vector2, Vector2, (a, b)=>(a.y*b.x - a.x*b.y));
@@ -38,5 +38,5 @@ spec.cross.def(Vector7, Vector7, (x, y)=>(
 			
 			return akk;
 		}
-	);
+	)
 ));
