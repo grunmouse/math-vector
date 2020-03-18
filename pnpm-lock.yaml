@@ -1,5 +1,7 @@
 dependencies:
   '@grunmouse/multioperator-ariphmetic': 'link:../multioperator-ariphmetic'
+  '@grunmouse/multioperator-spec-mul': 'link:../multioperator-spec-mul'
 lockfileVersion: 5.1
 specifiers:
   '@grunmouse/multioperator-ariphmetic': 'link:..\multioperator-ariphmetic'
+  '@grunmouse/multioperator-spec-mul': 'link:..\multioperator-spec-mul'

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grunmouse/multioperator-ariphmetic": "link:..\\multioperator-ariphmetic"
+    "@grunmouse/multioperator-ariphmetic": "link:..\\multioperator-ariphmetic",
+    "@grunmouse/multioperator-spec-mul": "link:..\\multioperator-spec-mul"
   }
 }
