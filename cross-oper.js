@@ -40,3 +40,7 @@ spec.cross.def(Vector7, Vector7, (x, y)=>(
 		}
 	)
 ));
+
+spec.cross.useName(Vector2);
+spec.cross.useName(Vector3);
+spec.cross.useName(Vector7);
