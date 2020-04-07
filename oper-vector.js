@@ -10,8 +10,6 @@ const {
 const Vector = require('./vector.js');
 
 oper.eq.def(Vector, Vector, (a, b)=>{
-	//console.log(a, b);
-	console.log(a[1] === b[1]);
 	return a.length === b.length && a.every((x, i)=>(x[symbols.EQ](b[i])));
 });
 
