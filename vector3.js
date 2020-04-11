@@ -20,6 +20,9 @@ class Vector3 extends Vector{
 		return this[2];
 	}
 	
+	static O(){
+		return Vector3(0, 0, 0);
+	}
 }
 
 Vector3.relAngle = function(start, target, rel){

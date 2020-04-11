@@ -16,6 +16,10 @@ class Vector extends Array{
 		return Math.acos(this.cosDiff(a, b));
 	}
 	
+	static O(len){
+		let Ctor = this.constructor;
+		return new Ctor(new Array(len).fill(0));
+	}
 }
 
 module.exports = Vector;

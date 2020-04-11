@@ -30,6 +30,10 @@ class Vector2 extends Vector{
 			return super.from(data, mapper);
 		}
 	}
+	
+	static O(){
+		return Vector2(0, 0);
+	}
 
 }
 
