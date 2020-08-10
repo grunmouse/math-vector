@@ -29,4 +29,6 @@ Vector3.relAngle = function(start, target, rel){
 	return Vector.angle(start, target) * Math.sign(start.cross(target).dot(rel));
 };
 
+Vector.Sized[3] = Vector3;
+
 module.exports = Vector3;

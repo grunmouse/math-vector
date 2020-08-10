@@ -16,4 +16,6 @@ class Vector7 extends Vector{
 	}
 }
 
+Vector.Sized[7] = Vector7;
+
 module.exports = Vector7;

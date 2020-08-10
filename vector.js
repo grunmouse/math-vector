@@ -1,5 +1,17 @@
 
 class Vector extends Array{
+	
+	constructor(...values){
+		let len = values.length;
+		if(Vector.Sized[len]){
+			let Ctor = Vector.Sized[len];
+			if(Ctor !== new.target){
+				return new Ctor(...values);
+			}
+		}
+		super(...values);
+	}
+	
 	abs(){
 		return Math.hypot(...this);
 	}
@@ -17,9 +29,11 @@ class Vector extends Array{
 	}
 	
 	static O(len){
-		let Ctor = this.constructor;
-		return new Ctor(new Array(len).fill(0));
+		let Ctor = this;
+		return new Ctor(...new Array(len).fill(0));
 	}
 }
+
+Vector.Sized = {};
 
 module.exports = Vector;

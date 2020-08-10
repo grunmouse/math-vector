@@ -37,4 +37,6 @@ class Vector2 extends Vector{
 
 }
 
+Vector.Sized[2] = Vector2;
+
 module.exports = Vector2;
