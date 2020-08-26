@@ -18,6 +18,22 @@ class Vector2 extends Vector{
 		return this[1];
 	}
 	
+	phi(){
+		return Math.atan2(this.y, this.x);
+	}
+	
+	toPolar(){
+		let phi = this.phi();
+		let abs = this.abs();
+		return {
+			phi, abs
+		};
+	}
+	
+	swap(){
+		return new Vector2(this.y, this.x);
+	}
+	
 	toJSON(){
 		return {x:this.x, y:this.y};
 	}
@@ -29,6 +45,10 @@ class Vector2 extends Vector{
 		else{
 			return super.from(data, mapper);
 		}
+	}
+	
+	static fromPolar({phi, abs}){
+		return new Vector2(abs*Math.cos(fi), abs*Math.sin(fi));
 	}
 	
 	static O(){

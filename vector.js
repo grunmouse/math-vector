@@ -32,6 +32,14 @@ class Vector extends Array{
 		let Ctor = this;
 		return new Ctor(...new Array(len).fill(0));
 	}
+	
+	extend(...values){
+		return new Vector(...this, ...values);
+	}
+	
+	cut(size){
+		return new Vector(...this.slice(0, size));
+	}
 }
 
 Vector.Sized = {};
