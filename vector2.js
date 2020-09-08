@@ -18,6 +18,18 @@ class Vector2 extends Vector{
 		return this[1];
 	}
 	
+	rotOrto(a){
+		let {x, y} = this;
+		a = (a%4 + 4)%4;
+		if(a & 1){
+			[x, y] = [-y, x];
+		}
+		if(a & 2){
+			[x, y] = [-x, -y];
+		}
+		return new this.constructor(x, y);
+	}
+	
 	phi(){
 		return Math.atan2(this.y, this.x);
 	}

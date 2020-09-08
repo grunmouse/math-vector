@@ -20,8 +20,22 @@ class Vector3 extends Vector{
 		return this[2];
 	}
 	
+	/**
+	 * Произвольный вектор, нормальный данному
+	 * Это такой ненулевой вектор, который при скалярном умножени на данный даёт ноль.
+	 */
+	someNormal(){
+		let [x,y,z] = this;
+		if(Math.abs(x) <= Number.EPSILON){
+			return new Vector(0, z, -y);
+		}
+		else{
+			return new Vector(y, -x, 0);
+		}
+	}
+	
 	static O(){
-		return Vector3(0, 0, 0);
+		return new Vector3(0, 0, 0);
 	}
 }
 
