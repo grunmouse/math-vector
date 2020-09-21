@@ -33,10 +33,16 @@ class Vector extends Array{
 		return new Ctor(...new Array(len).fill(0));
 	}
 	
+	/**
+	 * Создаёт расширенный вектор, добавляя измерения к данному
+	 */
 	extend(...values){
 		return new Vector(...this, ...values);
 	}
 	
+	/**
+	 * Создаёт обрезанный вектор, 
+	 */
 	cut(size){
 		return new Vector(...this.slice(0, size));
 	}
