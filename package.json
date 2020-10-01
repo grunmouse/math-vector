@@ -11,5 +11,8 @@
   "dependencies": {
     "@grunmouse/multioperator-ariphmetic": "link:..\\multioperator-ariphmetic",
     "@grunmouse/multioperator-spec-mul": "link:..\\multioperator-spec-mul"
+  },
+  "devDependencies": {
+    "jsverify": "^0.8.4"
   }
 }

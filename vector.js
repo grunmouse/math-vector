@@ -9,7 +9,16 @@ class Vector extends Array{
 				return new Ctor(...values);
 			}
 		}
-		super(...values);
+		if(len===1){
+			super(1);
+			this[0]=values[0];
+		}
+		else if(len === 0){
+			super();
+		}
+		else{
+			super(...values);
+		}
 	}
 	
 	abs(){

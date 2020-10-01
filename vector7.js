@@ -4,10 +4,10 @@ class Vector7 extends Vector{
 	
 	constructor(...arg){
 		if(arg.length){
-			return Vector7.from({length:7}, (_, i)=>(arg[i]||0));
+			super(...Array.from({length:7}, (_, i)=>(arg[i]||0)));
 		}
 		else{
-			super();
+			super(0,0,0,0,0,0,0);
 		}
 	}
 	

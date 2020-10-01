@@ -18,6 +18,10 @@ class Vector2 extends Vector{
 		return this[1];
 	}
 	
+	/**
+	 * Поворачивает вектор на угол, кратный прямому
+	 * @param {Int} a - множитель угла поворота
+	 */
 	rotOrto(a){
 		let {x, y} = this;
 		a = (a%4 + 4)%4;
