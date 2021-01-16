@@ -54,6 +54,23 @@ class Vector2 extends Vector{
 		return {x:this.x, y:this.y};
 	}
 	
+	/**
+	 * Находится ли вектор в секторе между векторами a и b
+	 */
+	isInSector(a, b){
+		let ab = a.cross(b);
+		let at = a.cross(this);
+		let tb = this.cross(b);
+		
+		if(ab > 0){
+			//левая пара
+			return at>0 && tb>0;
+		}
+		else{
+			return tb<0 || at <0;
+		}
+	}
+	
 	static from(data, mapper){
 		if(!data.length && 'x' in data && 'y' in data){
 			return super.from([data.x, data.y], mapper);
@@ -67,8 +84,15 @@ class Vector2 extends Vector{
 		return new Vector2(abs*Math.cos(fi), abs*Math.sin(fi));
 	}
 	
+	/**
+	 * Орт по углу
+	 */
+	static fromAngle(phi){
+		return return new Vector2(Math.cos(fi), Math.sin(fi));
+	}
+	
 	static O(){
-		return Vector2(0, 0);
+		return new Vector2(0, 0);
 	}
 
 }
