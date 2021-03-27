@@ -76,7 +76,7 @@ class Vector2 extends Vector{
 			return super.from([data.x, data.y], mapper);
 		}
 		else{
-			return super.from(data, mapper);
+			return super.from([data[0], data[1]], mapper);
 		}
 	}
 	
@@ -88,7 +88,7 @@ class Vector2 extends Vector{
 	 * Орт по углу
 	 */
 	static fromAngle(phi){
-		return return new Vector2(Math.cos(fi), Math.sin(fi));
+		return new Vector2(Math.cos(fi), Math.sin(fi));
 	}
 	
 	static O(){
