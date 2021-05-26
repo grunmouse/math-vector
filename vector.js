@@ -42,6 +42,11 @@ class Vector extends Array{
 		return new Ctor(...new Array(len).fill(0));
 	}
 	
+	static e(len, i){
+		let data = Array.from({length:len}, (_,j)=>(i === j ? 1 : 0));
+		return new Vector(data);
+	}
+	
 	/**
 	 * Создаёт расширенный вектор, добавляя измерения к данному
 	 */

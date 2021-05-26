@@ -12,14 +12,14 @@ const Vector3 = require('./vector3.js');
 const Vector7 = require('./vector7.js');
 
 //Псевдоскалярное произведение двухметрых векторов
-cross.def(Vector2, Vector2, (a, b)=>sub.call(a.y[MUL](b.x), a.x[MUL](b.y)));
+cross.def(Vector2, Vector2, (a, b)=>sub.call(a.x[MUL](b.y), a.y[MUL](b.x)));
 
 //Векторное произведение трёхмерных векторов
 cross.def(Vector3, Vector3, (a, b)=>(
 	new Vector3(
-		sub.call(a.z[MUL](b.y), a.y[MUL](b.z)), 
-		sub.call(a.x[MUL](b.z), a.z[MUL](b.x)), 
-		sub.call(a.y[MUL](b.x), a.x[MUL](b.y))
+		sub.call(a.y[MUL](b.z), a.z[MUL](b.y)), 
+		sub.call(a.z[MUL](b.x), a.x[MUL](b.z)), 
+		sub.call(a.x[MUL](b.y), a.y[MUL](b.x))
 	)
 ));
 

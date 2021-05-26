@@ -81,14 +81,14 @@ class Vector2 extends Vector{
 	}
 	
 	static fromPolar({phi, abs}){
-		return new Vector2(abs*Math.cos(fi), abs*Math.sin(fi));
+		return new Vector2(abs*Math.cos(phi), abs*Math.sin(phi));
 	}
 	
 	/**
 	 * Орт по углу
 	 */
 	static fromAngle(phi){
-		return new Vector2(Math.cos(fi), Math.sin(fi));
+		return new Vector2(Math.cos(phi), Math.sin(phi));
 	}
 	
 	static O(){
