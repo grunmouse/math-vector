@@ -60,6 +60,23 @@ class Vector extends Array{
 	cut(size){
 		return new Vector(...this.slice(0, size));
 	}
+	
+	/**
+	 * Преобразует вектор из проективной системы координат в аффинную
+	 */
+	fromProjective(){
+		let len = this.length;
+		let w = this[len-1];
+		let data = Array.from({length:len-1}, (_,i)=>(this[i]/w));
+		return new Vector(...data);
+	}
+	
+	/**
+	 * Преобразует вектор из аффинной системы координат в проективную
+	 */
+	toProjective(){
+		return this.extend(1);
+	}
 }
 
 Vector.Sized = {};
