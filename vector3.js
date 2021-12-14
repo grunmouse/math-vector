@@ -19,6 +19,30 @@ class Vector3 extends Vector{
 	get z(){
 		return this[2];
 	}
+
+	phi(){
+		return Math.atan2(this.y, this.x);
+	}
+
+	theta(){
+		return Math.atan2(Math.hypot(this.x, this.y), this.z);
+	}
+	
+	toSpheric(){
+		let phi = this.phi();
+		let theta = this.theta();
+		let abs = this.abs();
+		return {phi, theta, abs};
+	}
+	
+	static fromSpheric({phi, theta, abs}){
+		let z = abs*Math.cos(theta),
+			hor = abs*Math.sin(theta);
+		let x = hor*Math.cos(phi);
+		let y = hor*Math.sin(phi);
+		
+		return new Vector3(x, y, z);
+	}
 	
 	/**
 	 * Произвольный вектор, нормальный данному
