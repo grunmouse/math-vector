@@ -44,7 +44,7 @@ class Vector extends Array{
 	
 	static e(len, i){
 		let data = Array.from({length:len}, (_,j)=>(i === j ? 1 : 0));
-		return new Vector(data);
+		return new Vector(...data);
 	}
 	
 	/**
