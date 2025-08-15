@@ -69,3 +69,6 @@ spec.dot.def(Vector, Vector, (a, b)=>{
 });
 
 spec.dot.useName(Vector);
+
+/* Модуль */
+oper.abs.def(Vector, (a)=>(a.abs())); //Имя не юзаем, в векторе оно и так есть
